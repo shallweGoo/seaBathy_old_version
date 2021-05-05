@@ -1,0 +1,16 @@
+%该函数用于计算旋转矩阵Rec = Ref*Rfc
+%Rec为现实坐标系到相机坐标的旋转矩阵
+%Ref为现实坐标到机体坐标的旋转矩阵
+%Rfc为机体坐标到相机坐标的旋转矩阵
+
+%利用ZYX旋转，yaw,pitch,roll(x,y,z)
+function [R] = shallwe_angles2R(roll,pitch,yaw)
+%SHALLWE_ANGLES2R 此处显示有关此函数的摘要
+%   此处显示详细说明
+    R(1,1) = cos(pitch)*cos(yaw);
+    R(1,2) = cos(pitch)*sin(yaw);
+    R(1,3) = -sin(pitch);
+    R(2,1) = sin(roll)*sin(pitch)*cos(yaw);
+    R(2,2) = sin(roll)*
+end
+
